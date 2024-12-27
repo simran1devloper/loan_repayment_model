@@ -14,7 +14,7 @@ The model analyzes historical loan data, borrower demographics, financial behavi
 - [Training](#training)
 - [Evaluation](#evaluation)
 - [Usage](#usage)
-- [License](#license)
+
 
 ## Project Overview
 
