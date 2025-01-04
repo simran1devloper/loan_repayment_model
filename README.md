@@ -1,6 +1,6 @@
-# Loan Repayment Prediction Model using LSTM-CNN Technique
+# Loan Repayment Prediction Model using XGBoost
 
-This repository contains a machine learning model developed to predict loan repayment behavior using a hybrid Long Short-Term Memory (LSTM) and Convolutional Neural Network (CNN) approach. The model is designed to predict whether a borrower will repay a loan or default based on various financial and behavioral factors. By leveraging both sequential and feature extraction techniques, the LSTM-CNN model provides a robust solution for assessing credit risk and enhancing decision-making in financial institutions.
+This repository contains a machine learning model developed to predict loan repayment behavior using the **XGBoost** algorithm. XGBoost (Extreme Gradient Boosting) is a powerful and efficient implementation of gradient boosting, widely used for predictive modeling tasks. This model is designed to predict whether a borrower will repay a loan or default based on various financial and behavioral factors. By leveraging the power of XGBoost, the model provides an effective solution for assessing credit risk and improving decision-making in financial institutions.
 
 The model analyzes historical loan data, borrower demographics, financial behavior, and loan details to make predictions. This approach aims to improve the accuracy of loan repayment predictions, helping financial organizations reduce the risk of defaults and optimize their lending strategies.
 
@@ -15,10 +15,9 @@ The model analyzes historical loan data, borrower demographics, financial behavi
 - [Evaluation](#evaluation)
 - [Usage](#usage)
 
-
 ## Project Overview
 
-The Loan Repayment Prediction Model utilizes a combination of LSTM and CNN layers to address the complexities of predicting loan repayment behavior. LSTM is well-suited for modeling sequential data, such as historical payment patterns, while CNN helps in identifying relevant features and patterns that could indicate the likelihood of loan repayment or default.
+The Loan Repayment Prediction Model utilizes the **XGBoost** algorithm to address the complexities of predicting loan repayment behavior. XGBoost is a gradient boosting framework that is well-known for its speed and performance in solving classification tasks. It is particularly effective in handling structured data, making it ideal for predicting loan repayment behavior based on various financial and demographic features.
 
 This model can be used by banks, financial institutions, and lending platforms to improve their loan approval processes, reduce financial risks, and make more informed decisions based on predictive insights.
 
@@ -35,25 +34,24 @@ These features are carefully selected to represent both the financial behavior o
 
 ## Model Architecture
 
-The architecture is a hybrid of LSTM and CNN layers:
+The model uses **XGBoost** for classification:
 
-1. **LSTM Layer**: Captures sequential dependencies from the data, such as the borrower’s past payment history.
-2. **CNN Layer**: Extracts key features from the data to identify patterns in loan repayment behavior.
-3. **Fully Connected Layers**: Outputs the prediction of loan repayment (repay or default).
+1. **Gradient Boosting Algorithm**: The XGBoost algorithm builds an ensemble of decision trees through boosting, learning from errors made by previous models, and improving performance iteratively.
+2. **Hyperparameter Tuning**: Various hyperparameters like learning rate, max depth, and number of estimators are optimized to achieve the best model performance.
+3. **Prediction Output**: The model outputs a binary classification: whether the borrower will repay the loan or default.
 
 ### Model Workflow:
 
-- The sequential data is passed through the LSTM layer to learn temporal patterns in loan repayment.
-- The CNN layer processes the output of the LSTM to extract important features.
-- Finally, the dense layers make the final prediction of whether the borrower will repay the loan or default.
+- The dataset is preprocessed and encoded, with categorical features handled by label encoding or one-hot encoding.
+- The features are fed into the XGBoost model, which iteratively builds decision trees to improve the prediction.
+- The final prediction is whether the borrower is likely to repay the loan (1) or default (0).
 
 ## Requirements
 
 To run this project, you will need the following libraries:
 
 - Python 3.x
-- TensorFlow
-- Keras
+- XGBoost
 - Pandas
 - Numpy
 - Scikit-learn
